@@ -155,9 +155,9 @@ jobs:
           cd ./wrt/
           # 使用 sed 在第一行和第二行插入自定义源
           # 插入 OpenClash 到第一行
-          sed -i '1i src-git openclash https://github.com/vernesong/OpenClash.git' ./feeds.conf.default
+          #sed -i '1i src-git openclash https://github.com/vernesong/OpenClash.git' ./feeds.conf.default
           # 插入 PassWall2 到第二行
-          sed -i '2i src-git passwall2 https://github.com/Openwrt-Passwall/openwrt-passwall2.git' ./feeds.conf.default
+          sed -i '1i src-git passwall2 https://github.com/Openwrt-Passwall/openwrt-passwall2.git' ./feeds.conf.default
 
           # 更新并安装
           ./scripts/feeds update -a
